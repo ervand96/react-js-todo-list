@@ -2,11 +2,11 @@ import Home from "./pages/home";
 import Header from "./components/featured/header";
 import Main from "./components/featured/main";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-
-import "./App.css";
+import { navBarPath } from "./constants/navbar";
 import About from "./pages/about";
 import Contact from "./pages/contact";
-import { navBarPath } from "./components/constants/navbar";
+
+import "./App.css";
 
 function App() {
   return (

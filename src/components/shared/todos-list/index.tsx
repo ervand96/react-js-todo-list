@@ -1,5 +1,5 @@
 import { TodosListProps } from "./type";
-import { IconsEnum } from "../../constants/enum";
+import { IconsEnum } from "../../../constants/enum";
 
 import styles from "./todosList.module.scss";
 
