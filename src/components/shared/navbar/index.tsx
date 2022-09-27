@@ -1,4 +1,4 @@
-import { navbar, NavbarProps } from "../../constants/navbar";
+import { navbar, NavbarProps } from "../../../constants/navbar";
 import { Link } from "react-router-dom";
 import styles from "./navbar.module.scss";
 
