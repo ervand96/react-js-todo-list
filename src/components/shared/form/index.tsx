@@ -1,8 +1,9 @@
 import { v4 as uuidv4 } from "uuid";
+import { useEffect } from "react";
+import { TodosListProps } from "../todos-list/type";
 import { FormProps } from "./type";
 
 import styles from "./form.module.scss";
-import { useEffect } from "react";
 
 export default function Form({
   input,
@@ -17,8 +18,9 @@ export default function Form({
   };
 
   const updateTodo = (title: any, id: any, completed: any): void => {
-    const newTodo = todos.map((todo: any) =>
-      todo.id === id ? { title, id, completed } : todo
+    const newTodo = todos.map(
+      (todo: any): TodosListProps =>
+        todo.id === id ? { title, id, completed } : todo
     );
     setTodos(newTodo);
     setEditTodo("");
@@ -53,7 +55,7 @@ export default function Form({
         required
         onChange={onInputChange}
       />
-      <button className={styles.buttonAdd} type="submit">
+      <button className={styles.buttonAdd} type="submit" disabled={!input}>
         {editTodo ? "Ok" : "Add"}
       </button>
     </form>

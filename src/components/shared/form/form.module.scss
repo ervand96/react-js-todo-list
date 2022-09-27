@@ -18,6 +18,10 @@
   border: 0;
   background-color: #f1af71;
   cursor: pointer;
+
+  &:disabled {
+    background-color: #c89666;
+  }
 }
 
 input:focus,
