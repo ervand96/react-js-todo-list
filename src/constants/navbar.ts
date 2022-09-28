@@ -5,9 +5,9 @@ export interface NavbarProps {
 
 export enum navBarPath {
   HOME = "/",
-  ABOUT = "about",
-  TODO_LIST = "todo-list",
-  CONTACT = "contact",
+  ABOUT = "/about",
+  TODO_LIST = "/todo-list",
+  CONTACT = "/contact",
 }
 
 export const navbar: NavbarProps[] = [

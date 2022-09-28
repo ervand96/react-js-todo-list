@@ -22,7 +22,7 @@ export default function Main(): JSX.Element {
     <div className={styles.container}>
       <div className={styles.appWrapper}>
         <div>
-          <HeaderTitle title="Todo-List" />
+          <HeaderTitle tab_one="Todo-List" />
         </div>
         <div>
           <Form
@@ -34,7 +34,7 @@ export default function Main(): JSX.Element {
             setEditTodo={setEditTodo}
           />
         </div>
-        <div>
+        <div className={styles.todoList}>
           <TodosList
             todos={todos}
             setTodos={setTodos}
