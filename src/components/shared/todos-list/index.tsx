@@ -30,39 +30,46 @@ export default function TodosList({
 
   return (
     <>
-      {todos?.map((todo: TodosListProps, index: number): any => {
-        return (
-          <li className={styles.lisItem} key={index}>
-            <strong className={styles.index}>{index + 1}</strong>
-            <input
-              type="text"
-              value={todo.title}
-              className={!todo?.completed ? styles.list : styles.complete}
-              onChange={(event) => event.preventDefault()}
-            />
-            <div>
-              <button
-                className={styles.buttonComplete}
-                onClick={() => handleComplete(todo)}
-              >
-                <i className={IconsEnum.checkCircleIcon}></i>
-              </button>
-              <button
-                className={styles.buttonEdit}
-                onClick={() => handlerEdit(todo)}
-              >
-                <i className={IconsEnum.editIcon}></i>
-              </button>
-              <button
-                className={styles.buttonDelete}
-                onClick={() => handleDelete(todo)}
-              >
-                <i className={IconsEnum.deleteIcon}></i>
-              </button>
-            </div>
-          </li>
-        );
-      })}
+      {todos.length ? (
+        todos?.map((todo: TodosListProps, index: number): any => {
+          return (
+            <li className={styles.lisItem} key={index}>
+              <strong className={styles.index}>{index + 1}</strong>
+              <input
+                type="text"
+                value={todo.title}
+                className={!todo?.completed ? styles.list : styles.complete}
+                onChange={(e) => e.preventDefault()}
+              />
+              <div className={styles.iconsSection}>
+                <button
+                  className={styles.buttonComplete}
+                  onClick={() => handleComplete(todo)}
+                >
+                  <i className={IconsEnum.checkCircleIcon}></i>
+                </button>
+                <button
+                  className={styles.buttonEdit}
+                  onClick={() => handlerEdit(todo)}
+                >
+                  <i className={IconsEnum.editIcon}></i>
+                </button>
+                <button
+                  className={styles.buttonDelete}
+                  onClick={() => handleDelete(todo)}
+                >
+                  <i className={IconsEnum.deleteIcon}></i>
+                </button>
+              </div>
+            </li>
+          );
+        })
+      ) : (
+        <div className={styles.emptyTodos}>
+          <h1> Please Add Todo </h1>
+          <i className={IconsEnum.smile}></i>
+        </div>
+      )}
     </>
   );
 }

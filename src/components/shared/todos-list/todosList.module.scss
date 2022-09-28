@@ -1,27 +1,44 @@
 .lisItem {
     display: flex;
     margin: 20px 0;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border_color);
     border-radius: 10px;
     padding: 10px;
     max-height: 30px;
+    z-index: 2;
+
+    @media screen and (max-width: 490px) {
+        margin: 15px 0;
+        width: 280px;
+        display: flex;
+    }
 }
 
 .index {
-    color: aliceblue;
+    color: var(--white_900);
     display: flex;
     align-items: center;
     font-size: 20px;
+
+    @media screen and (max-width: 490px) {
+        font-size: 14px;
+    }
 }
 
 .list {
     width: 220px;
-    background-color: #12343b;
+    background-color: var(--background_todo);
     border: none;
-    color: #ccc;
+    color: var(--border_color);
     font-size: 20px;
     padding-left: 10px;
     margin-right: 15px;
+    user-select: none;
+
+    @media screen and (max-width: 490px) {
+        margin-right: 0;
+        font-size: 14px;
+    }
 }
 
 .buttonComplete {
@@ -36,15 +53,20 @@
 .complete {
     text-decoration: solid;
     text-decoration-line: line-through;
-    text-decoration-color: #ff6c6c;
+    text-decoration-color: var(--text_decoration_color);
     opacity: 0.6;
     width: 220px;
-    background-color: #12343b;
+    background-color: var(--background_todo);
     border: none;
-    color: #ccc;
+    color: var(--border_color);
     font-size: 20px;
     padding-left: 10px;
     margin-right: 15px;
+
+    @media screen and (max-width: 490px) {
+        margin-right: 0;
+        font-size: 14px;
+    }
 }
 
 .buttonComplete,
@@ -56,17 +78,42 @@
     background-color: transparent;
     font-size: 28px;
     border-radius: 50%;
+
+    @media screen and (max-width: 490px) {
+        font-size: 18px;
+    }
 }
 
 .buttonComplete {
-    color: #ff6c6c;
+    color: var(--text_decoration_color);
     margin-right: 10px;
 }
 
 .buttonEdit {
-    color: #e2d029;
+    color: var(--button_edit_color);
     margin-right: 10px;
 }
 .buttonDelete {
-    color: lightseagreen;
+    color: var(--button_delete_color);
+}
+
+@media screen and (max-width: 490px) {
+    .iconsSection {
+        display: flex;
+    }
+}
+
+.emptyTodos {
+    color: var(--white_900);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    flex-direction: column;
+    gap: 50px;
+
+    i {
+        font-size: 48px;
+        color: var(--button_edit_color);
+    }
 }
