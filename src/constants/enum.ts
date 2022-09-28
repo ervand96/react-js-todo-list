@@ -4,3 +4,8 @@ export enum IconsEnum {
   deleteIcon = "fa fa-trash",
   smile = "fa fa-smile-o",
 }
+
+export enum AddButtonEnum {
+  OK = "Ok",
+  ADD = "Add",
+}

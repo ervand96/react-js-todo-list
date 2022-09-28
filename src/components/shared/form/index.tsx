@@ -2,6 +2,7 @@ import { v4 as uuidv4 } from "uuid";
 import { useEffect } from "react";
 import { TodosListProps } from "../todos-list/type";
 import { FormProps } from "./type";
+import { AddButtonEnum } from "../../../constants/enum";
 
 import styles from "./form.module.scss";
 
@@ -52,11 +53,10 @@ export default function Form({
         placeholder="Enter a Todo..."
         className={styles.taskInput}
         value={input}
-        required
         onChange={onInputChange}
       />
       <button className={styles.buttonAdd} type="submit" disabled={!input}>
-        {editTodo ? "Ok" : "Add"}
+        {editTodo ? AddButtonEnum.OK : AddButtonEnum.ADD}
       </button>
     </form>
   );
