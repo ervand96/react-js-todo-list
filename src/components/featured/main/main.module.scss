@@ -6,11 +6,17 @@
     box-sizing: border-box;
     border-radius: 10px;
     box-shadow: 3px 6px 40px #000;
-    margin-bottom: 10px;
+    margin: 80px 0px;
+    transition: all 0.7s ease-in-out;
 
     @media screen and (max-width: 490px) {
         min-width: 360px;
         min-height: 480px;
+    }
+
+    &:hover {
+        transition: all 0.7s ease-in-out;
+        box-shadow: 30px 32px 64px 12px #10182824;
     }
 }
 
@@ -19,8 +25,4 @@
     justify-content: center;
     align-items: center;
     margin-top: 32px;
-}
-
-.todoList {
-    z-index: 1;
 }

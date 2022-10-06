@@ -1,5 +1,7 @@
-import { TodosListProps } from "./type";
+import { useState } from "react";
+import { WarningModal } from "../warningModal";
 import { IconsEnum } from "../../../constants/enum";
+import { TodosListProps } from "./type";
 
 import styles from "./todosList.module.scss";
 
@@ -8,9 +10,18 @@ export default function TodosList({
   setTodos,
   setEditTodo,
 }: TodosListProps): JSX.Element {
-  const handleDelete = ({ id }: any): void => {
-    setTodos(todos?.filter((todo: any) => todo?.id !== id));
+  const [toDoId, setToDoId] = useState<any>(null);
+  const [toDo, setToDo] = useState<any>(null);
+  const [closeModal, setCloseModal] = useState<boolean>(false);
+
+  const open = (id: any): void => {
+    setToDoId(id);
+    setCloseModal(true);
   };
+
+  const close = () => {
+    setCloseModal(false);
+  }
 
   const handleComplete = (todo: any): void => {
     setTodos(
@@ -28,10 +39,25 @@ export default function TodosList({
     setEditTodo(findTodo);
   };
 
+  const handleDelete = (): void => {
+    setTodos(todos?.filter((item: any) => item.id !== toDoId));
+    setCloseModal(false);
+  };
+
   return (
-    <>
+    <div className={styles.section}>
+      <div>
+        {closeModal &&
+          <WarningModal
+            onCancel={close}
+            onAccept={handleDelete}
+            visible={closeModal}
+            messageTitle={`Are you sure you want to delete  your task?`}
+          />
+        }
+      </div>
       {todos.length ? (
-        todos?.map((todo: TodosListProps, index: number): any => {
+        todos?.map((todo: any, index: number): any => {
           return (
             <li className={styles.lisItem} key={index}>
               <strong className={styles.index}>{index + 1}</strong>
@@ -56,7 +82,7 @@ export default function TodosList({
                 </button>
                 <button
                   className={styles.buttonDelete}
-                  onClick={() => handleDelete(todo)}
+                  onClick={() => open(todo.id)}
                 >
                   <i className={IconsEnum.deleteIcon}></i>
                 </button>
@@ -66,10 +92,10 @@ export default function TodosList({
         })
       ) : (
         <div className={styles.emptyTodos}>
-          <h1> Please Add Todo </h1>
+          <h1> You have no tasks add tasks </h1>
           <i className={IconsEnum.smile}></i>
         </div>
       )}
-    </>
+    </div>
   );
 }

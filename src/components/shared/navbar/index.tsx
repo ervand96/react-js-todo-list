@@ -51,9 +51,8 @@ export default function Navbar(): JSX.Element {
             </Link>
           </div>
           <ul
-            className={`${!activeHamburger && styles.openHeaderNavbar} ${
-              styles.navLinks
-            }`}
+            className={`${!activeHamburger && styles.openHeaderNavbar} ${styles.navLinks
+              }`}
           >
             <div className={styles.menu}>
               {navbar?.map((item: NavbarProps, index: number) => (

@@ -18,7 +18,7 @@ export default function Form({
     setInput(event.target.value);
   };
 
-  const updateTodo = (title: any, id: any, completed: any): void => {
+  const updateTodo = (title: string, id: number, completed: boolean): void => {
     const newTodo = todos.map(
       (todo: any): TodosListProps =>
         todo.id === id ? { title, id, completed } : todo
