@@ -92,7 +92,7 @@ export default function TodosList({
         })
       ) : (
         <div className={styles.emptyTodos}>
-          <h1> Please Add Todo </h1>
+          <h1> You have no tasks add tasks </h1>
           <i className={IconsEnum.smile}></i>
         </div>
       )}

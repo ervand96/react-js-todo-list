@@ -111,6 +111,10 @@
     flex-direction: column;
     gap: 50px;
 
+    h1 {
+        font-size: 28px;
+    }
+
     i {
         font-size: 48px;
         color: var(--button_edit_color);

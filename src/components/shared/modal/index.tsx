@@ -8,8 +8,6 @@ export default function Modal({
   className,
   ...rest
 }: ModalProps): JSX.Element {
-  console.log(isModalVisible, 'nnnn');
-
   return (
     <AntdModal
       className={className}
