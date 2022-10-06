@@ -9,3 +9,8 @@ export enum AddButtonEnum {
   OK = "Ok",
   ADD = "Add",
 }
+
+export enum ModalButtonTextEnum {
+  CANCEL = "Cancel",
+  YES = "Yes",
+}
