@@ -2,9 +2,11 @@ body {
     font-family: cursive;
     width: 100%;
 }
+
 a {
     text-decoration: none;
 }
+
 li {
     list-style: none;
 }
@@ -14,6 +16,7 @@ li {
     position: fixed;
     top: 0;
 }
+
 .navbar {
     display: flex;
     align-items: center;
@@ -32,9 +35,11 @@ li {
         display: none;
     }
 }
+
 .navLinks a {
     color: var(--white_900);
 }
+
 .logo {
     a {
         font-size: 32px;
@@ -42,11 +47,13 @@ li {
         color: var(--white_900) !important;
     }
 }
+
 .menu {
     display: flex;
     gap: 1em;
     font-size: 18px;
 }
+
 .menu li:hover {
     background-color: var(--background-active);
     border-radius: 5px;
@@ -56,6 +63,7 @@ li {
 .menu li {
     padding: 5px 14px;
 }
+
 .services {
     position: relative;
 }
@@ -72,6 +80,7 @@ li {
     align-items: center;
     justify-content: space-between !important;
 }
+
 .hamburgerMenuBox {
     display: none;
 }

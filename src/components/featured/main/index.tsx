@@ -12,7 +12,7 @@ export default function Main(): JSX.Element {
 
   const [input, setInput] = useState<string>("");
   const [todos, setTodos] = useState<Object>(initialState);
-  const [editTodo, setEditTodo] = useState(null);
+  const [editTodo, setEditTodo] = useState<any>(null);
 
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
