@@ -68,6 +68,52 @@
     }
 }
 
+.iconsSection {
+    display: flex;
+    .tooltip {
+        position: relative;
+
+        .tool {
+            display: none;
+            transition: 0.5s !important;
+        }
+
+        &:hover {
+            .tool {
+                width: 99px;
+                background-color: var(--button_add_bg_disabled);
+                position: absolute;
+                top: -31px;
+                color: var(--white_900);
+                height: 25px;
+                border-radius: 3px;
+                display: block;
+                right: -11px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: 0.5s !important;
+                z-index: 2;
+
+                span {
+                    z-index: 1111;
+                }
+
+                .floorTool {
+                    position: absolute;
+                    width: 10px;
+                    height: 20px;
+                    top: 11px;
+                    background-color: var(--button_add_bg_disabled);
+                    transform: rotate(59deg);
+                    right: 15px;
+                    z-index: 0;
+                }
+            }
+        }
+    }
+}
+
 .buttonComplete,
 .buttonDelete,
 .buttonEdit {

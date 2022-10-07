@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { WarningModal } from "../warningModal";
-import { IconsEnum } from "../../../constants/enum";
+import { ButtonTextEnum, EmptyToDoList, IconsEnum, ModalTextEnum } from "../../../constants/enum";
 import { TodosListProps } from "./type";
 
 import styles from "./todosList.module.scss";
@@ -11,7 +11,6 @@ export default function TodosList({
   setEditTodo,
 }: TodosListProps): JSX.Element {
   const [toDoId, setToDoId] = useState<any>(null);
-  const [toDo, setToDo] = useState<any>(null);
   const [closeModal, setCloseModal] = useState<boolean>(false);
 
   const open = (id: any): void => {
@@ -52,7 +51,7 @@ export default function TodosList({
             onCancel={close}
             onAccept={handleDelete}
             visible={closeModal}
-            messageTitle={`Are you sure you want to delete  your task?`}
+            messageTitle={ModalTextEnum.MODAL_TEXT}
           />
         }
       </div>
@@ -68,31 +67,49 @@ export default function TodosList({
                 onChange={(e) => e.preventDefault()}
               />
               <div className={styles.iconsSection}>
-                <button
-                  className={styles.buttonComplete}
-                  onClick={() => handleComplete(todo)}
-                >
-                  <i className={IconsEnum.checkCircleIcon}></i>
-                </button>
-                <button
-                  className={styles.buttonEdit}
-                  onClick={() => handlerEdit(todo)}
-                >
-                  <i className={IconsEnum.editIcon}></i>
-                </button>
-                <button
-                  className={styles.buttonDelete}
-                  onClick={() => open(todo.id)}
-                >
-                  <i className={IconsEnum.deleteIcon}></i>
-                </button>
+                <div className={styles.tooltip}>
+                  <div className={styles.tool} >
+                    <div className={styles.floorTool} />
+                    <span>{ButtonTextEnum.COMPLETED}</span>
+                  </div>
+                  <button
+                    className={styles.buttonComplete}
+                    onClick={() => handleComplete(todo)}
+                  >
+                    <i className={IconsEnum.checkCircleIcon}></i>
+                  </button>
+                </div>
+                <div className={styles.tooltip}>
+                  <div className={styles.tool} >
+                    <div className={styles.floorTool} />
+                    <span>{ButtonTextEnum.EDIT}</span>
+                  </div>
+                  <button
+                    className={styles.buttonEdit}
+                    onClick={() => handlerEdit(todo)}
+                  >
+                    <i className={IconsEnum.editIcon}></i>
+                  </button>
+                </div>
+                <div className={styles.tooltip}>
+                  <div className={styles.tool}>
+                    <div className={styles.floorTool} />
+                    <span>{ButtonTextEnum.DELETE}</span>
+                  </div>
+                  <button
+                    className={styles.buttonDelete}
+                    onClick={() => open(todo.id)}
+                  >
+                    <i className={IconsEnum.deleteIcon}></i>
+                  </button>
+                </div>
               </div>
             </li>
           );
         })
       ) : (
         <div className={styles.emptyTodos}>
-          <h1> You have no tasks add tasks </h1>
+          <h1>{EmptyToDoList.EMPTY_TODO_LIST}</h1>
           <i className={IconsEnum.smile}></i>
         </div>
       )}

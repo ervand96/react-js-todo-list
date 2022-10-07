@@ -5,7 +5,7 @@
     padding: 30px;
     box-sizing: border-box;
     border-radius: 10px;
-    box-shadow: 3px 6px 40px #000;
+    box-shadow: var(--box_shadow);
     margin: 80px 0px;
     transition: all 0.7s ease-in-out;
 
@@ -16,7 +16,7 @@
 
     &:hover {
         transition: all 0.7s ease-in-out;
-        box-shadow: 30px 32px 64px 12px #10182824;
+        box-shadow: var(--box_shadow_hover);
     }
 }
 

@@ -26,6 +26,12 @@
             color: var(--white_900);
             cursor: pointer;
             font-size: 14px;
+            transition: 0.5s;
+
+            &:hover {
+                transition: 0.5s;
+                box-shadow: var(--box_shadow_modal_button);
+            }
         }
     }
 
@@ -41,15 +47,21 @@
     .closeModal {
         text-align: end;
         margin: 10px 20px 0px 0px;
+
         .buttonClose {
             cursor: pointer;
-
             background-color: var(--button_add_bg_disabled);
             border: none;
             border-radius: 3px;
             padding: 4px 10px;
             color: var(--white_900);
             font-size: 10px;
+            transition: 0.5s;
+
+            &:hover {
+                transition: 0.5s;
+                box-shadow: var(--box_shadow_modal_button);
+            }
         }
     }
 }

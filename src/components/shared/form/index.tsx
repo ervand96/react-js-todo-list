@@ -46,6 +46,7 @@ export default function Form({
       updateTodo(input, editTodo.id, editTodo.completed);
     }
   };
+
   return (
     <form onSubmit={onFormSubmit}>
       <input
