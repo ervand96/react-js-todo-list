@@ -12,7 +12,6 @@ export default function About(): JSX.Element {
   return (
     <div className={styles.container}>
       <div className={styles.section}>
-
         <input placeholder="Search Data..." onChange={event => { getValue(event) }} />
         {FAKE_DATA.filter((val) => {
           if (data.trim() == '') {
