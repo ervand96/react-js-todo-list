@@ -21,8 +21,8 @@ export default function About(): JSX.Element {
           <input placeholder="Search name & last name..." onChange={event => { getValue(event) }} />
         </div>
         {FAKE_DATA.filter(val => {
-          if (data === '') {
-            return val
+           if (data === '') {
+            return val;
           } else if (
             val.first_name.toLocaleLowerCase().includes(data.trim().toLocaleLowerCase())
             || val.last_name.toLocaleLowerCase().includes(data.trim().toLocaleLowerCase())
