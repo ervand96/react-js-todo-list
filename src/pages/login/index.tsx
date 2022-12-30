@@ -32,5 +32,4 @@ export default function Login(): JSX.Element {
         </div>
 
     );
->>>>>>> 7e4a9e9877c3720e2155ecc6735e076128ce5a26
 }
