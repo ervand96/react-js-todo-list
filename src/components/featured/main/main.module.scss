@@ -26,3 +26,21 @@
         }
     }
 }
+
+.appWrapper::-webkit-scrollbar-track {
+    padding: 2px 0;
+    background-color: var(--background_todo);
+    border-radius: 4px;
+}
+
+.appWrapper::-webkit-scrollbar {
+    width: 7px;
+    max-height: 200px;
+}
+
+.appWrapper::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #111827;
+    border-radius: 4px;
+}
