@@ -9,8 +9,10 @@ export default function FacebookLoginAuth(): JSX.Element {
     const [picture, setPicture] = useState<string>('');
     const [isVisible, setIsVisible] = useState<boolean>(false);
 
+    console.log(data);
+    console.log(isVisible);
+
     const responseFacebook = (response: any) => {
-        console.log(response);
         setData(response);
         setLogin(false);
         setPicture(response.picture.data.url);

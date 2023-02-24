@@ -19,7 +19,7 @@ export default function Form({
   };
 
   const updateTodo = (title: string, id: number, completed: boolean): void => {
-    const newTodo = todos.map(
+    const newTodo = todos?.map(
       (todo: any): TodosListProps =>
         todo.id === id ? { title, id, completed } : todo
     );
