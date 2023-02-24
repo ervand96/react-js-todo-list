@@ -6,10 +6,10 @@ import LoginWithGoogle from "../../components/shared/loginWithGoogle";
 import styles from "./login.module.scss";
 
 export default function Login(): JSX.Element {
+  const [form] = Form.useForm();
+
   const onFinish = (values: any) => {
-    console.log("====================================");
-    console.log(values);
-    console.log("====================================");
+    const { email, password } = form.getFieldsValue();
   };
 
   return (
@@ -19,7 +19,7 @@ export default function Login(): JSX.Element {
           <div className={styles.shape}></div>
           <div className={styles.shape}></div>
         </div>
-        <Form className={styles.formClass} onFinish={onFinish}>
+        <Form className={styles.formClass} onFinish={onFinish} form={form}>
           <h3>Login</h3>
           <div className={styles.emailSec}>
             <Form.Item
