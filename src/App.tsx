@@ -2,7 +2,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/home";
 import Login from "./pages/login";
 import About from "./pages/about";
-import Contact from "./pages/contact";
 import Header from "./components/featured/header";
 import Main from "./components/featured/main";
 import { navBarPath } from "./constants/navbar";
@@ -18,7 +17,6 @@ function App() {
           <Route path={navBarPath.HOME} element={<Home />} />
           <Route path={navBarPath.ABOUT} element={<About />} />
           <Route path={navBarPath.TODO_LIST} element={<Main />} />
-          <Route path={navBarPath.CONTACT} element={<Contact />} />
           <Route path={navBarPath.LOGIN} element={<Login />} />
         </Routes>
       </BrowserRouter>

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { navbar, navBarPath, NavbarProps } from "../../../constants/navbar";
 import HamburgerMenu from "../hamburger-menu";
-import { Link } from "react-router-dom";
 
 import styles from "./navbar.module.scss";
 
@@ -57,15 +57,16 @@ export default function Navbar(): JSX.Element {
           >
             <div className={styles.menu}>
               {navbar?.map((item: NavbarProps, index: number) => (
-                <li
-                  onClick={() => setIsActive(item.path)}
-                  key={index}
-                  className={
-                    isActive === item.path ? styles.active : styles.menu
-                  }
-                >
-                  <Link to={item?.path}>{item?.title} </Link>
-                </li>
+                <Link to={item?.path} key={index}>
+                  <li
+                    onClick={() => setIsActive(item.path)}
+                    className={
+                      isActive === item?.path ? styles.active : styles.menu
+                    }
+                  >
+                    {item?.title}
+                  </li>
+                </Link>
               ))}
             </div>
           </ul>

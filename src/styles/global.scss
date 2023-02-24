@@ -1,18 +1,29 @@
 html:root {
-    --white_900: #ffffff;
-    --background_todo: #051a1f;
-    --black_900: #000000;
-    --button_add_bg: #f1af71;
-    --button_add_bg_disabled: #c89666;
-    --background_todo_list: rgb(18, 52, 59);
-    --background-active: #4c9e9e;
-    --border_color: #ccc;
-    --text_decoration_color: #ff6c6c;
-    --button_edit_color: #e2d029;
-    --button_delete_color: lightseagreen;
-    --box_shadow_hover: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-    --box_shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-        rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    --box_shadow_modal_button: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
-        rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  --white_900: #ffffff;
+  --background_todo: #051a1f;
+  --black_900: #000000;
+  --button_add_bg: #f1af71;
+  --button_add_bg_disabled: #c89666;
+  --background_todo_list: rgb(18, 52, 59);
+  --background-active: #4c9e9e;
+  --border_color: #ccc;
+  --text_decoration_color: #ff6c6c;
+  --button_edit_color: #e2d029;
+  --button_delete_color: lightseagreen;
+  --button_animation: #ff0000;
+  --button_animation3: #ff7300;
+  --button_animation4: #fffb00;
+  --button_animation5: #48ff00;
+  --button_animation6: #00ffd5;
+  --button_animation7: #002bff;
+  --button_animation8: #7a00ff;
+  --button_animation9: #ff00c8;
+
+  --box_shadow_hover: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  --box_shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  --box_shadow_modal_button: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
