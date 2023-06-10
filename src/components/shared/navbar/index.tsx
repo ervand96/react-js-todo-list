@@ -10,7 +10,7 @@ const local = JSON.parse(localStorage.getItem("active")!) || "";
 export default function Navbar(): JSX.Element {
   const [isActive, setIsActive] = useState<Object>(local);
   const [activeHamburger, setActiveHamburger] = useState<boolean>(true);
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null); 
 
   useEffect(() => {
     localStorage.setItem("active", JSON.stringify(isActive));
