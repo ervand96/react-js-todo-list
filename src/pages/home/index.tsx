@@ -1,3 +1,4 @@
+import ScheduleEmailComponent from "../scheduleEmail/cron";
 import styles from "./home.module.scss";
 
 export default function Home(): JSX.Element {

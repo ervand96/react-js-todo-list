@@ -3,12 +3,10 @@ import GoogleLogin from "react-google-login";
 const LoginWithGoogle = (): JSX.Element => {
   const onFailure = (res: any) => {
     // TODO add functionality
-    console.log("[Login Failed] res:", res);
   };
 
   const handleLogin = (googleData: any) => {
     // TODO add functionality
-    console.log(googleData);
   };
 
   return (

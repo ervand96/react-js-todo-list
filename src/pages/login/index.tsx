@@ -2,23 +2,43 @@ import { Button, Form, Input } from "antd";
 import facebookIcon from "../../assets/img/facebook.svg";
 import FacebookLoginAuth from "../../components/shared/facebookLoginAuth";
 import LoginWithGoogle from "../../components/shared/loginWithGoogle";
+import { redirect } from "react-router-dom";
 
 import styles from "./login.module.scss";
 
 export default function Login(): JSX.Element {
   const [form] = Form.useForm();
 
-  const onFinish = (values: any) => {
+  const onFinish = async (): Promise<void>  => {
     const { email, password } = form.getFieldsValue();
-  };
+    
+    try {
+    const registrationData = {
+      email: email,
+      password: password,
+    };
+
+  const res = await fetch('http://localhost:4000/login', {
+    method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(registrationData),
+    })
+    
+    console.log(res);
+    
+    // if(res.status) {
+    //   redirect('/')
+    // }
+  } catch(err) {
+    console.log('Error: ', err);
+  }
+}
 
   return (
     <div>
       <div className={styles.a}>
-        <div className={styles.background}>
-          <div className={styles.shape}></div>
-          <div className={styles.shape}></div>
-        </div>
         <Form className={styles.formClass} onFinish={onFinish} form={form}>
           <h3>Login</h3>
           <div className={styles.emailSec}>
