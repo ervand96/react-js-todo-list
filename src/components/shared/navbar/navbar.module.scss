@@ -24,13 +24,13 @@ li {
     background-color: var(--background_todo_list);
     color: var(--white_900);
 
-    @media screen and (max-width: 620px) {
+    @media screen and (max-width: 800px) {
         flex-direction: row-reverse;
     }
 }
 
 .navLinks {
-    @media screen and (max-width: 620px) {
+    @media screen and (max-width: 800px) {
         display: none;
     }
 }
@@ -84,7 +84,7 @@ li {
     display: none;
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 800px) {
     .hamburgerMenuBox {
         display: block !important;
         transition: all 0.5s;
@@ -96,7 +96,7 @@ li {
     transition: all 0.5s;
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 800px) {
     .openHeaderNavbar {
         position: absolute;
         transition: all 0.5s;
