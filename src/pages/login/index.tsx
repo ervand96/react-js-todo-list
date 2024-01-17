@@ -2,7 +2,6 @@ import { Button, Form, Input } from "antd";
 import facebookIcon from "../../assets/img/facebook.svg";
 import FacebookLoginAuth from "../../components/shared/facebookLoginAuth";
 import LoginWithGoogle from "../../components/shared/loginWithGoogle";
-import { redirect } from "react-router-dom";
 
 import styles from "./login.module.scss";
 
@@ -28,9 +27,6 @@ export default function Login(): JSX.Element {
     
     console.log(res);
     
-    // if(res.status) {
-    //   redirect('/')
-    // }
   } catch(err) {
     console.log('Error: ', err);
   }

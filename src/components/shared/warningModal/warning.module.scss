@@ -1,15 +1,9 @@
 .modalAntd {
-    position: absolute;
-    top: 0;
-    width: 400px;
+    display: flex;
     background-color: var(--background_todo);
     box-shadow: var(--box-shadow-modal);
     justify-content: center;
-    border: 1px solid var(--button_add_bg_disabled);
-    border-radius: 10px;
-    top: 150px;
-    right: 500px;
-    padding-bottom: 20px;
+    align-items: center;
     z-index: 999999999999999;
 
     .modalButton {
@@ -38,8 +32,8 @@
     .text {
         text-align: center;
         margin-top: 20px;
+
         span {
-            color: var(--white_900);
             font-size: 20px;
         }
     }

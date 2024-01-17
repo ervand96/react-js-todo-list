@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { navbar, navBarPath, NavbarProps } from "../../../constants/navbar";
 import HamburgerMenu from "../hamburger-menu";
+import Breadcrumbs from "../breadcrumbs";
 
 import styles from "./navbar.module.scss";
 
@@ -49,6 +50,7 @@ export default function Navbar(): JSX.Element {
             <Link to="/" onClick={() => setIsActive(navBarPath.HOME)}>
               ReactJs
             </Link>
+            <Breadcrumbs />
           </div>
           <ul
             className={`${!activeHamburger && styles.openHeaderNavbar} ${

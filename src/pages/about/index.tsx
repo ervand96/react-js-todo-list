@@ -40,13 +40,14 @@ export default function About(): JSX.Element {
           ) {
             return val;
           }
+          return false
         }).map((e, index) => (
           <div className={styles.all} key={index}>
             <div className={styles.id}>
               <span>{e.id}</span>
             </div>
             <div className={styles.data}>
-              <p>{e.first_name + " " + " " + e.last_name}</p>
+              <p>{`${e.first_name} ${e.last_name}`}</p>
             </div>
           </div>
         ))}
@@ -66,6 +67,7 @@ export default function About(): JSX.Element {
           } else if (value.email.toString().includes(isEmail.trim())) {
             return value;
           }
+          return false
         }).map((e, index) => (
           <div className={styles.all} key={index}>
             <div className={styles.id}>
